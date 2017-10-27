@@ -24,3 +24,8 @@ data and the decompressed representation (i.e. a "loss" function). The encoder a
 functions (typically neural networks), and to be differentiable with respect to the distance function, so the parameters
 of the encoding/decoding functions can be optimize to minimize the reconstruction loss, using Stochastic Gradient Descent.
 It's simple! And you don't even need to understand any of these words to start using autoencoders in practice.
+
+##Are they good at data compression?
+
+Usually, not really. In picture compression for instance, it is pretty difficult to train an autoencoder that does a better job than a basic algorithm like JPEG, and typically the only way it can be achieved is by restricting yourself to a very specific type of picture (e.g. one for which JPEG does not do a good job). The fact that autoencoders are data-specific makes them generally impractical for real-world data compression problems: you can only use them on data that is similar to what they were trained on, and making them more general thus requires lots of training data. But future advances might change this, who knows.
+
